@@ -135,7 +135,7 @@ footer nav{margin:0;font-size:14px}
 <body>
 <header id="hd"><div class="bar">
 <a class="logo" href="#hem" aria-label="Aron Tagesson, startsida">Aron Tagesson</a>
-<nav id="nav" aria-label="Huvudmeny"><a href="#hem">Hem</a><a href="#arbete">Mitt arbete</a><a href="#tjanster">Tjänster</a><a href="#om">Om mig</a><a href="#kontakt">Kontakt</a></nav>
+<nav id="nav" aria-label="Huvudmeny"><a href="#hem">Hem</a><a href="#arbete">Mitt arbete</a><a href="#tjanster">Tjänster</a><a href="#kontakt">Kontakt</a></nav>
 <a class="btn sm" href="#kontakt">Kontakta mig</a>
 <button class="menu" id="mb" aria-label="Öppna menyn">☰</button>
 </div></header>
@@ -186,14 +186,6 @@ footer nav{margin:0;font-size:14px}
 <div class="cta" style="justify-content:flex-start;margin-top:48px"><a class="btn" href="#kontakt">Kontakta mig</a></div>
 </div></section></div>
 
-<div class="page" id="om"><section><div class="w">
-<h1 style="font-size:clamp(38px,6vw,68px)">Om mig</h1>
-<p class="lead">Jag heter Aron Tagesson och är videoredigerare med eget företag. Jag redigerar främst short form, men gör även long form för YouTube och liknande.</p>
-<div class="grid"><div class="card big"><h3>Så jobbar jag</h3><p>Jag jobbar nära mina kunder, från creators till etablerade företag, och anpassar varje projekt efter vad som ska uppnås.</p><p>Det går snabbt, är personligt och hålls enkelt: du pratar direkt med mig.</p></div>
-<div class="card big" style="display:grid;place-items:center;background:var(--alt);color:var(--mute);min-height:240px">Plats för porträttfoto</div></div>
-<div class="cta" style="justify-content:flex-start;margin-top:40px"><a class="btn" href="#kontakt">Kontakta mig</a></div>
-</div></section></div>
-
 <div class="page" id="kontakt"><section><div class="w">
 <h1 style="font-size:clamp(38px,6vw,68px);max-width:14ch">Låt oss skapa något bra ihop.</h1>
 <p class="lead">Berätta kort om ditt projekt så återkommer jag.</p>
@@ -210,7 +202,7 @@ footer nav{margin:0;font-size:14px}
 
 </main>
 <footer><div class="w"><a class="logo" href="#hem">Aron Tagesson</a>
-<nav><a href="#arbete">Mitt arbete</a><a href="#tjanster">Tjänster</a><a href="#om">Om mig</a><a href="#kontakt">Kontakt</a></nav>
+<nav><a href="#arbete">Mitt arbete</a><a href="#tjanster">Tjänster</a><a href="#kontakt">Kontakt</a></nav>
 <span>aron@tagesson.net · © Aron Tagesson 2026</span></div></footer>
 <div id="toast" role="status"></div>
 <script>
@@ -227,7 +219,7 @@ work.style.display=l.length?"":"none";document.getElementById("lf").style.displa
 render("all");
 document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tabs button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");render(b.dataset.f)}});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("v");io.unobserve(e.target)}})},{threshold:.15});
-var names=["hem","arbete","tjanster","om","kontakt"];
+var names=["hem","arbete","tjanster","kontakt"];
 function route(){var h=location.hash.slice(1);if(names.indexOf(h)<0)h="hem";
 document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("show",p.id==h)});
 document.querySelectorAll("header nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});

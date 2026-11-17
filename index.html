@@ -520,6 +520,41 @@ header.cs .btn{height:44px}
 .pin{font:500 13px/1 var(--sans)!important;padding:6px 10px!important;border-radius:6px!important}
 .seg .ind{background:linear-gradient(120deg,#0a2547 0%,#0d3369 45%,#1a56c4 100%)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 0 0 1px rgba(255,255,255,.12)!important}
 .seg button[aria-selected="true"]{color:#fff}
+
+/* nyhetsknapp i hero */
+.news{display:inline-flex;align-items:center;gap:12px;margin-bottom:24px;padding:4px 16px 4px 4px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:background-color .16s var(--ease),border-color .16s var(--ease)}
+.news:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
+.news-tag{padding:8px 12px;border-radius:7px;font-size:14px;font-weight:600;color:#fff;background:linear-gradient(90deg,#1a56c4,#4cc38a);text-shadow:0 1px 1px rgba(0,0,0,.2)}
+.news-txt{font-size:15px;color:#e6ebf3}
+.news:hover .news-txt{color:#fff}
+@media (max-width:760px){.news{gap:10px;padding-right:12px}.news-tag{font-size:13px;padding:6px 10px}.news-txt{font-size:13px;line-height:1.35}}
+
+.news{padding:0;gap:8px;background:none!important;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;border-radius:4px}
+.news-tag{padding:0;background:none;text-shadow:none;font-size:15px;font-weight:600;color:#4cc38a}
+.news-txt{text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:4px;transition:text-decoration-color .16s var(--ease)}
+.news:hover .news-txt{text-decoration-color:rgba(255,255,255,.7)}
+@media (max-width:760px){.news{padding:0}.news-tag{padding:0;font-size:13px}}
+
+.news{display:inline-block;margin-bottom:16px;font-size:16px;font-weight:600;color:#4cc38a;text-decoration:none;transition:color .16s var(--ease)}
+.news:hover{color:#6fd6a4}
+@media (max-width:760px){.news{font-size:14px}}
+
+/* rullande banner under menyn */
+.ticker{position:absolute;top:72px;left:0;right:0;z-index:3;height:40px;overflow:hidden;display:flex;align-items:center;
+  background:linear-gradient(90deg,#1a56c4,#2a8fa6 50%,#4cc38a);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.ticker-track{display:flex;align-items:center;gap:32px;white-space:nowrap;width:max-content;padding-left:32px;animation:tick 40s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker span{font-size:14px;font-weight:600;text-shadow:0 1px 1px rgba(0,0,0,.2)}
+.ticker i{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+@media (max-width:760px){.ticker{top:72px;height:36px}.ticker span{font-size:13px}}
+
+.plan.yes .lf{margin-top:20px;padding:12px 14px;border-radius:10px;font-size:14px;line-height:1.45;color:var(--text-2);
+  background:rgba(76,195,138,.08);border:1px solid rgba(76,195,138,.22)}
+.plan.yes .lf b{color:#4cc38a;font-weight:600}
 </style>
 </head>
 <body>
@@ -556,7 +591,7 @@ header.cs .btn{height:44px}
     </svg>
     <div class="wrap">
       <div class="cs-copy">
-        <h1 class="in">Videoredigering för kreatörer och företag</h1>
+        <h1 class="in" style="--i:1">Videoredigering för kreatörer och företag</h1>
         <p class="lead in" style="--i:2">Hör av dig så jobbar vi ihop. Ditt material förtjänar att klippas rätt, med en hook som stoppar scrollen och ett tempo som håller kvar tittaren.</p>
         <a class="btn btn-blue in" style="--i:3" href="#kontakt">Hör av dig nu</a>
       </div>
@@ -592,6 +627,7 @@ header.cs .btn{height:44px}
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Justeras efter dina revideringar</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Snabb leverans via Google Drive</li>
           </ul>
+          <p class="lf"><b>Long form:</b> första videon gratis, endast för mina första long form-kunder</p>
           <a class="btn btn-blue" href="#kontakt">Få ett förslag</a>
           <p class="resp"><i class="dot"></i>Svarar inom 24 h</p>
         </div>

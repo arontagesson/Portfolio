@@ -16,7 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2224%22%20fill%3D%22%2303203D%22/%3E%3Cpath%20d%3D%22M50%2025.5%20L27.5%2071%20L50%2057.5%20L72.5%2071%20Z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-width%3D%227.5%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /*
   Aron Tagesson · Videoredigering
@@ -590,6 +590,54 @@ footer.sign{background:var(--deep)}
 .trust img{width:auto;display:block;opacity:.95}
 .trust .tname{font-size:22px;font-weight:600;letter-spacing:-.02em;color:#fff}
 @media (max-width:760px){.trust{padding-bottom:36px}.trust ul{gap:20px 32px}.trust .tname{font-size:19px}}
+
+/* rubrikfont: Plus Jakarta Sans */
+h1,h2,h3,.bigstats dd,.stat dd,.trust .tname{font-family:"Plus Jakarta Sans",var(--sans)}
+.cs-copy h1{letter-spacing:-.025em;font-weight:600}
+h2{letter-spacing:-.015em}
+.bigstats dd{letter-spacing:-.03em}
+
+/* dimma-kort: paketet och menyn */
+header.cs{background:linear-gradient(100deg,#f4f6fa 0%,#e4e9f1 100%)}
+.plan.yes{background:linear-gradient(135deg,#EEF1F6 0%,#d9dfea 50%,#A9B4C6 100%);border:1px solid rgba(255,255,255,.75);
+  box-shadow:0 32px 64px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.9);color:#0b1220}
+.plan.yes h3{color:#0b1220}
+.plan.yes .sub{color:#364154}
+.plan.yes .price b{color:#0b1220}
+.plan.yes .price span{color:#4a5568}
+.plan.yes ul{border-top-color:rgba(11,18,32,.14)}
+.plan.yes li{border-bottom-color:rgba(11,18,32,.14);color:#0b1220}
+.plan.yes li svg{color:#168a5c}
+.plan.yes .lf{color:#2d3748;background:rgba(22,138,92,.10);border-color:rgba(22,138,92,.30)}
+.plan.yes .lf b{color:#0f7048}
+.plan.yes .resp{color:#364154}
+
+/* Solar Flare: highlight på paketet, ingenstans annars */
+.paket{overflow:hidden}
+.paket .plans{position:relative}
+.paket .plans::before{content:"";position:absolute;inset:-14% -12%;z-index:0;pointer-events:none;opacity:.6;filter:blur(56px);
+  background:radial-gradient(42% 46% at 28% 28%,#FF8A00 0%,rgba(255,138,0,0) 72%),
+             radial-gradient(46% 52% at 72% 38%,#FF2E63 0%,rgba(255,46,99,0) 72%),
+             radial-gradient(40% 40% at 48% 82%,#FFB020 0%,rgba(255,176,32,0) 72%)}
+.plan.yes{z-index:1}
+.pin{background:linear-gradient(90deg,#FF5A1F,#FF2E63)!important;font-weight:600!important}
+
+/* paketknappen i Solar Flare, övriga knappar enfärgat blå */
+.plan.yes .btn-blue,.plan.yes .btn-acc,.plan.yes .btn-blue:hover,.plan.yes .btn-acc:hover{background:linear-gradient(90deg,#FF5A1F 0%,#FF2E63 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 24px rgba(255,46,99,.28)}
+.plan.yes .btn-blue:hover,.plan.yes .btn-acc:hover{filter:brightness(1.08)}
+
+/* mjukare övergång under paketet: glöden tonar ut och sektionerna möts utan skarp kant */
+.paket{overflow:visible;overflow-x:clip}
+.paket .plans::before{inset:-12% -14%;opacity:1;filter:blur(48px);
+  -webkit-mask-image:radial-gradient(farthest-side,#000 65%,rgba(0,0,0,0) 100%);mask-image:radial-gradient(farthest-side,#000 65%,rgba(0,0,0,0) 100%)}
+#arbete{background:radial-gradient(80% 40% at 50% 30%,rgba(26,86,196,.14),rgba(26,86,196,0) 70%)}
+
+/* rubriker: fetare och luftigare */
+h1,h2{font-weight:700;letter-spacing:-.01em;word-spacing:.06em}
+h3{font-weight:600;letter-spacing:-.005em}
+.cs-copy h1{font-weight:700;letter-spacing:-.015em;word-spacing:.06em}
+.bigstats dd,.stat dd{font-weight:700;letter-spacing:-.02em}
+.trust .tname{font-weight:700}
 </style>
 </head>
 <body>
